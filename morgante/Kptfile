@@ -10,14 +10,14 @@ metadata:
 upstream:
   type: git
   git:
-    repo: https://github.com/morgante/demo-blueprints
+    repo: 'https://github.com/morgante/demo-blueprints'
     directory: /standard-ns
     ref: v1
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
-    repo: https://github.com/morgante/demo-blueprints
+    repo: 'https://github.com/morgante/demo-blueprints'
     directory: /standard-ns
     ref: v1
     commit: 28439623e0d021fb654f1e1d4e356e9543135e48
@@ -27,8 +27,8 @@ info:
   - tenant
 pipeline:
   mutators:
-  - image: gcr.io/cad-demo-sdk/set-namespace:latest
+  - image: 'gcr.io/cad-demo-sdk/set-namespace:latest'
   validators:
-  - image: gcr.io/kpt-fn/kubeval:v0.1
+  - image: 'gcr.io/kpt-fn/kubeval:v0.1'
     configMap:
       ignore_missing_schemas: 'true'
